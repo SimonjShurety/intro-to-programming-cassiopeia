@@ -3,7 +3,7 @@ let year = today.getFullYear();
 let footer = document.querySelector("footer");
 
 let copyright = document.createElement("p");
-copyright.innerText = `Simon © ${year}`;
+copyright.innerText = `© Simon ${year}`;
 footer.appendChild(copyright);
 
 let skillsSection = document.getElementById("skills");
@@ -17,3 +17,64 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+const messageHeading = document.getElementById("headingMessage");
+let hideMessage = document.getElementById("messageList");
+
+let messageForm = document.querySelector('[name="leave_message"]');
+
+function toggleMessageHeader() {
+  hideMessage.hasChildNodes()
+    ? (messageHeading.style.display = "block")
+    : (messageHeading.style.display = "none");
+}
+toggleMessageHeader();
+
+messageForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = event.target.name.value;
+  const email = event.target.email.value;
+  const message = event.target.message.value;
+  let messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `<a href=“mailto:${email}“>${name}</a> wrote: <span>${message}  </span>`;
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "Remove";
+  removeButton.type = "button";
+
+  removeButton.addEventListener("click", (event) => {
+    const entry = removeButton.parentNode;
+    entry.remove();
+    toggleMessageHeader();
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+  toggleMessageHeader();
+  messageForm.reset();
+
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit";
+  editButton.type = "button";
+
+  editButton.addEventListener("click", (event) => {
+    const edit = editButton.parentNode;
+    edit.remove();
+  });
+  newMessage.appendChild(editButton);
+  messageList.appendChild(newMessage);
+  messageForm.reset();
+});
+
+// const childrens = Array.from(event.target);
+
+// const children = childrens.reduce((acc, child) => {
+//   if (child.name) {
+//     acc[child.name] = child.value;
+//   }
+
+//   return acc;
+// }, {});
+// console.log(children);
