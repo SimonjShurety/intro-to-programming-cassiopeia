@@ -10,9 +10,9 @@
     <section>
         <h1>About:</h1>
         <ul>
-            <li>Tea drinker living in Brazil.</li>
+            <li>Tea supping Web Dev.</li>
             <li>Thinkpad Enthusiast.</li>
-            <li>Calisthenics fan</li>
+            <li>Calisthenics fan.</li>
         </ul>
     </section>
 
@@ -43,15 +43,35 @@
     <aside>
         <h3>How to make a cup of tea.</h3>
         <ul>
-            <li>Teabag</li>
-            <li>Boiling water</li>
+            <li>Put a teabag in a cup</li>
+            <li>Add boiling water</li>
             <li>Steep for 2-3 minutes</li>
-            <li>Squeeze teabag</li>
-            <li>Add sugar</li>
-            <li>Add milk</li>
+            <li>Squeeze teabag with teaspoon</li>
+            <li>Add sugar, stir</li>
+            <li>Add milk, stir</li>
             <li>Blow, sip and "aahhhhh"</li>
         </ul>
     </aside>
+    <section>
+        <h2>Leave a Message</h2>
+        <form action="" name="leave_message">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="name" required="true">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="email" name="email" required="true">
+            <br>
+            <textarea name="message" required="true" id="" cols="30" rows="10"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <section id="messages">
+        <h2 id="headingMessage">Messages</h2>
+        <ul id="messageList"></ul>
+    </section>
     <footer></footer>
     <script src="script.js"></script>
 </body>
