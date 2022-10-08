@@ -1,16 +1,72 @@
-body {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  user-select: none;
+}
+
+.hidden{
+  display: none;
+}
+
+input, textarea, button{
+  color: black;
+}
+
+body, html {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: radial-gradient(
-    circle 759px at -6.7% 50%,
-    rgba(80, 131, 73, 1) 0%,
-    rgba(140, 209, 131, 1) 26.2%,
-    rgba(178, 231, 170, 1) 50.6%,
-    rgba(144, 213, 135, 1) 74.1%,
-    rgba(75, 118, 69, 1) 100.3%
-  );
+  min-height: 100vh;
 }
 
 section {
   margin: 20px;
   padding: 10px;
+}
+
+body{
+  position: relative;
+}
+
+.background{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.background div{
+  height: 100%;
+}
+
+#column-1{
+  background-color: #4D6D9A;
+  width: 31%;
+}
+
+#column-2{
+  background-color: #99CED3;
+  width: 5%;
+}
+#column-3{
+  background-color: #86B3D1;
+  width: 31%;
+}
+#column-4{
+  background-color: #EDB5BF;
+  width: 2%;
+}
+
+#column-5{
+  background-color: #5F6366;
+  width: 31%;
+}
+
+.title-stuff{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 5px;
+  font-family: 'Courier New', Courier, monospace;
 }

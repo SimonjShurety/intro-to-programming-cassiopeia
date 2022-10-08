@@ -7,10 +7,12 @@
 </head>
 
 <body>
+
     <h1> Simon Shurety </h1>
     <section>
-        <h2>About:</h2>
-        <ul>
+        <h2 onclick="document.querySelector('.abt-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+            About:</h2>
+        <ul class="hidden abt-info">
             <li>Tea supping Web Dev.</li>
             <li>Thinkpad Enthusiast.</li>
             <li>Calisthenics fan.</li>
@@ -18,8 +20,9 @@
     </section>
 
     <section>
-        <h2>Experience:</h2>
-        <ul>
+        <h2 onclick="document.querySelector('.exp-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+            Experience:</h2>
+        <ul class="hidden exp-info">
             <li>Javascript/CSS/HTML Git/Github/VS-Code</li>
             <li>Electrical/Mechanical repair.</li>
             <li>Laptop/PC/Smartphone repair.</li>
@@ -28,13 +31,15 @@
 
     </section>
     <section id="skills">
-        <h2>Skills:</h2>
-        <ul></ul>
+        <h2 onclick="document.querySelector('.skill-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
+            Skills:</h2>
+        <ul class="hidden skill-info"></ul>
     </section>
 
     <section>
-        <h1>Connect:</h1>
-        <ul>
+        <h2 onclick="document.querySelector('.connect-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+            Connect:</h2>
+        <ul class="hidden connect-info">
             <li>simonjshurety@gmail.com</li>
             <li>https://github.com/SimonjShurety</li>
             <li>linkedIn</li>
@@ -43,12 +48,14 @@
     <section>
 
         <aside>
-            <h2>How to make a cup of tea.</h2>
-            <ul>
+            <h2 onclick="document.querySelector('.tea-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+                How to make a cup of
+                tea.</h2>
+            <ul class="hidden tea-info">
                 <li>Put a teabag in a cup</li>
                 <li>Add boiling water</li>
                 <li>Steep for 2-3 minutes</li>
-                <li>Squeeze teabag with teaspoon</li>
+                <li>Squeeze teabag with tea spoon</li>
                 <li>Add sugar, stir</li>
                 <li>Add milk, stir</li>
                 <li>Blow, sip and "aahhhhh"</li>
@@ -56,17 +63,24 @@
         </aside>
     </section>
     <section>
-        <h2>Leave a Message</h2>
-        <form action="" name="leave_message">
+        <h2 onclick="document.querySelector('.message-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+            Leave a Message</h2>
+        <form action="" name="leave_message" class="message-info hidden">
+            <br>
             <label for="name">Name</label>
             <br>
             <input type="text" name="name" required="true">
+            <br>
             <br>
             <label for="email">Email</label>
             <br>
             <input type="email" name="email" required="true">
             <br>
+            <br>
+            Description
+            <br>
             <textarea name="message" required="true" id="" cols="30" rows="10"></textarea>
+            <br>
             <br>
             <button type="submit">Submit</button>
         </form>
@@ -75,7 +89,16 @@
         <h2 id="headingMessage">Messages</h2>
         <ul id="messageList"></ul>
     </section>
-    <footer></footer>
+    <footer valign="bottom"></footer>
+
+    <div class="background">
+        <div id="column-1"></div>
+        <div id="column-2"></div>
+        <div id="column-3"></div>
+        <div id="column-4"></div>
+        <div id="column-5"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

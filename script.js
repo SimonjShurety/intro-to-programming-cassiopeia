@@ -6,7 +6,7 @@ let copyright = document.createElement("p");
 copyright.innerText = `© Simon ${year}`;
 footer.appendChild(copyright);
 
-let skillsSection = document.getElementById("skills");
+let skillsSection = document.querySelector("#skills");
 
 let skillsList = skillsSection.querySelector("ul");
 
@@ -35,6 +35,7 @@ messageForm.addEventListener("submit", (event) => {
   const name = event.target.name.value;
   const email = event.target.email.value;
   const message = event.target.message.value;
+  const messageEl = event.target.message;
   let messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
   const newMessage = document.createElement("li");
@@ -61,7 +62,9 @@ messageForm.addEventListener("submit", (event) => {
 
   editButton.addEventListener("click", (event) => {
     const edit = editButton.parentNode;
-    edit.remove();
+    editButton.innerText = "Done";
+    messageEl.setAttribute('contenteditable', '""')
+    
   });
   newMessage.appendChild(editButton);
   messageList.appendChild(newMessage);
