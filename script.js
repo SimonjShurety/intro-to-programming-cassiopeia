@@ -71,13 +71,4 @@ messageForm.addEventListener("submit", (event) => {
   messageForm.reset();
 });
 
-// const childrens = Array.from(event.target);
 
-// const children = childrens.reduce((acc, child) => {
-//   if (child.name) {
-//     acc[child.name] = child.value;
-//   }
-
-//   return acc;
-// }, {});
-// console.log(children);
