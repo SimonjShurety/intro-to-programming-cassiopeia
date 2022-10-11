@@ -4,36 +4,75 @@
 <head>
     <title>Personal Page</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu" role="list">
+                    <li class="menu__item">
+                        <img class="image image--small image--rounded" src="img/.png" role="presentation" />
+                    </li>
+                    <li class="menu__item menu__item--large">
+                        <a class="link link--no-color strong" href="/">Simon Shurety</a>
+                    </li>
+                </ul>
 
-    <h1> Simon Shurety </h1>
+                <ul class="menu menu--hide-mobile" role="list">
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="#about">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="#skills">Skills</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="#experience">Experience</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="#projects">Projects</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <section>
         <h2 onclick="document.querySelector('.abt-info').classList.toggle('hidden');" class="title-stuff">&#9660;
             About:</h2>
-        <ul class="hidden abt-info">
-            <li>Tea supping Web Dev.</li>
-            <li>Thinkpad Enthusiast.</li>
-            <li>Calisthenics fan.</li>
-        </ul>
+        <div class="hidden abt-info">
+            <p> A tea sipping web dev with a penchant for tech, surfing and nautical navigation with sextants. I bring
+                the best communication skills from my time as an ESL teacher as well as helping fellow students with one
+                to one sessions. I also enjoy collecting Thinkpad laptops and keeping fit with bodyweight exercises</p>
+        </div>
     </section>
 
     <section>
         <h2 onclick="document.querySelector('.exp-info').classList.toggle('hidden');" class="title-stuff">&#9660;
             Experience:</h2>
-        <ul class="hidden exp-info">
-            <li>Javascript/CSS/HTML Git/Github/VS-Code</li>
-            <li>Electrical/Mechanical repair.</li>
-            <li>Laptop/PC/Smartphone repair.</li>
-            <li>Teaching ESL</li>
-        </ul>
+        <div class="hidden exp-info">
+            <li>ESL Teacher</li>
+            <li>High School Program Tutor</li>
+            <li>Building Restoration</li>
+            <li>Photocopier|Printer mobile technician</li>
+        </div>
 
     </section>
     <section id="skills">
         <h2 onclick="document.querySelector('.skill-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
             Skills:</h2>
         <ul class="hidden skill-info"></ul>
+    </section>
+    <section id="projects">
+        <h2 onclick="document.querySelector('.proj-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
+            Projects:</h2>
+
+        <ul class="hidden proj-info"></ul>
+
     </section>
 
     <section>
@@ -89,7 +128,34 @@
         <h2 id="headingMessage">Messages</h2>
         <ul id="messageList"></ul>
     </section>
-    <footer valign="bottom"></footer>
+    <footer valign="bottom">
+        <div class="container">
+            <nav class="nav">
+                <p id="copyright">
+                    <!-- JS  magic-->
+                </p>
+
+                <ul class="menu" role="list">
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="https://linkedin.com" target="_blank" title="LinkedIn">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="https://github.com/simonjshurety" target="_blank"
+                            title="GitHub">
+                            <i data-feather="github"></i>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="https://twitter.com" target="_blank" title="Twitter">
+                            <i data-feather="twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
     <div class="background">
         <div id="column-1"></div>
@@ -100,6 +166,9 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>
