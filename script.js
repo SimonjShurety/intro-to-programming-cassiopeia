@@ -5,12 +5,20 @@ let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
 copyright.innerText = `© Simon ${year}`;
 footer.appendChild(copyright);
+copyright.className = "copyright";
 
-let skillsSection = document.getElementById("skills");
+let skillsSection = document.querySelector("#skills");
 
 let skillsList = skillsSection.querySelector("ul");
 
-const skills = ["Technical skill 1", "Technical skill 2", "Technical skill 3"];
+const skills = [
+  "Javascript | ",
+  " CSS | ",
+  " HTML | ",
+  " Git/Github | ",
+  " VS Code | ",
+  " PC/Laptop repair | ",
+];
 
 for (let i = 0; i < skills.length; i++) {
   let skill = document.createElement("li");
@@ -35,6 +43,7 @@ messageForm.addEventListener("submit", (event) => {
   const name = event.target.name.value;
   const email = event.target.email.value;
   const message = event.target.message.value;
+  const messageEl = event.target.message;
   let messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
   const newMessage = document.createElement("li");
@@ -43,6 +52,7 @@ messageForm.addEventListener("submit", (event) => {
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
+  removeButton.className = "remove";
 
   removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentNode;
@@ -55,26 +65,26 @@ messageForm.addEventListener("submit", (event) => {
   toggleMessageHeader();
   messageForm.reset();
 
-  const editButton = document.createElement("button");
-  editButton.innerText = "Edit";
-  editButton.type = "button";
-
-  editButton.addEventListener("click", (event) => {
-    const edit = editButton.parentNode;
-    edit.remove();
-  });
-  newMessage.appendChild(editButton);
   messageList.appendChild(newMessage);
   messageForm.reset();
 });
 
-// const childrens = Array.from(event.target);
+function renderProjectsWithFetch() {
+  fetch("https://api.github.com/users/simonjshurety/repos")
+    .then((res) => res.json())
+    .then((data) => {
+      // Get the specific repo
+      const repo = data.find(
+        (repo) => repo.name === "intro-to-programming-cassiopeia"
+      );
 
-// const children = childrens.reduce((acc, child) => {
-//   if (child.name) {
-//     acc[child.name] = child.value;
-//   }
+      const projectSection = document.querySelector("#projects");
+      const projectList = projectSection.querySelector("ul");
 
-//   return acc;
-// }, {});
-// console.log(children);
+      const project = document.createElement("li");
+      project.innerHTML = `<a class="link link--no-decor" href="${repo.html_url}">${repo.name}</a>`;
+      projectList.appendChild(project);
+    });
+}
+
+renderProjectsWithFetch();
