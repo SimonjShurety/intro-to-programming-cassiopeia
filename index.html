@@ -11,150 +11,148 @@
     <header>
         <div class="container">
             <nav class="nav">
-                <ul class="menu" role="list">
-                    <li class="menu__item">
-                        <img class="image image--small image--rounded" src="img/.png" role="presentation" />
-                    </li>
-                    <li class="menu__item menu__item--large">
-                        <a class="link link--no-color strong" href="/">Simon Shurety</a>
+                <ul class="menu">
+
+                    <li>
+                        <a class="name">Simon Shurety</a>
                     </li>
                 </ul>
 
-                <ul class="menu menu--hide-mobile" role="list">
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="#about">About</a>
+                <ul class="menu" id="nav-menu">
+                    <li class="menu-item">
+                        <a href="#about">About</a>
                     </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="#skills">Skills</a>
+                    <li class="menu-item">
+                        <a href="#skills">Skills</a>
                     </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="#experience">Experience</a>
+                    <li class="menu-item">
+                        <a href="#experience">Experience</a>
                     </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="#projects">Projects</a>
+                    <li class="menu-item">
+                        <a href="#projects">Projects</a>
                     </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="#contact">Contact</a>
+                    <li class="menu-item">
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <hr class="rule">
+    <main>
 
-    <section>
-        <h2 onclick="document.querySelector('.abt-info').classList.toggle('hidden');" class="title-stuff">&#9660;
-            About:</h2>
-        <div class="hidden abt-info">
-            <p> A tea sipping web dev with a penchant for tech, surfing and nautical navigation with sextants. I bring
-                the best communication skills from my time as an ESL teacher as well as helping fellow students with one
-                to one sessions. I also enjoy collecting Thinkpad laptops and keeping fit with bodyweight exercises</p>
-        </div>
-    </section>
-
-    <section>
-        <h2 onclick="document.querySelector('.exp-info').classList.toggle('hidden');" class="title-stuff">&#9660;
-            Experience:</h2>
-        <div class="hidden exp-info">
-            <li>ESL Teacher</li>
-            <li>High School Program Tutor</li>
-            <li>Building Restoration</li>
-            <li>Photocopier|Printer mobile technician</li>
-        </div>
-
-    </section>
-    <section id="skills">
-        <h2 onclick="document.querySelector('.skill-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
-            Skills:</h2>
-        <ul class="hidden skill-info"></ul>
-    </section>
-    <section id="projects">
-        <h2 onclick="document.querySelector('.proj-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
-            Projects:</h2>
-
-        <ul class="hidden proj-info"></ul>
-
-    </section>
-
-    <section>
-        <h2 onclick="document.querySelector('.connect-info').classList.toggle('hidden');" class="title-stuff">&#9660;
-            Connect:</h2>
-        <ul class="hidden connect-info">
-            <li>simonjshurety@gmail.com</li>
-            <li>https://github.com/SimonjShurety</li>
-            <li>linkedIn</li>
-        </ul>
-    </section>
-    <section>
-
-        <aside>
-            <h2 onclick="document.querySelector('.tea-info').classList.toggle('hidden');" class="title-stuff">&#9660;
-                How to make a cup of
-                tea.</h2>
-            <ul class="hidden tea-info">
-                <li>Put a teabag in a cup</li>
-                <li>Add boiling water</li>
-                <li>Steep for 2-3 minutes</li>
-                <li>Squeeze teabag with tea spoon</li>
-                <li>Add sugar, stir</li>
-                <li>Add milk, stir</li>
-                <li>Blow, sip and "aahhhhh"</li>
-            </ul>
-        </aside>
-    </section>
-    <section>
-        <h2 onclick="document.querySelector('.message-info').classList.toggle('hidden');" class="title-stuff">&#9660;
-            Leave a Message</h2>
-        <form action="" name="leave_message" class="message-info hidden">
-            <br>
-            <label for="name">Name</label>
-            <br>
-            <input type="text" name="name" required="true">
-            <br>
-            <br>
-            <label for="email">Email</label>
-            <br>
-            <input type="email" name="email" required="true">
-            <br>
-            <br>
-            Description
-            <br>
-            <textarea name="message" required="true" id="" cols="30" rows="10"></textarea>
-            <br>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    <section id="messages">
-        <h2 id="headingMessage">Messages</h2>
-        <ul id="messageList"></ul>
-    </section>
-    <footer valign="bottom">
-        <div class="container">
-            <nav class="nav">
-                <p id="copyright">
-                    <!-- JS  magic-->
+        <section id="about" class="about-info">
+            <h2 onclick="document.querySelector('.abt-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+                About:</h2>
+            <div class="hidden abt-info">
+                <p> A tea sipping web dev with a penchant for anything techie and a special place in my heart for
+                    Thinkpads. Hiking, surfing and calisthenics help keep me fit.
                 </p>
+            </div>
+        </section>
 
-                <ul class="menu" role="list">
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="https://linkedin.com" target="_blank" title="LinkedIn">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="https://github.com/simonjshurety" target="_blank"
-                            title="GitHub">
-                            <i data-feather="github"></i>
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="link link--no-color" href="https://twitter.com" target="_blank" title="Twitter">
-                            <i data-feather="twitter"></i>
-                        </a>
-                    </li>
+        <section id="experience" class="experience-info">
+            <h2 onclick="document.querySelector('.exp-info').classList.toggle('hidden');" class="title-stuff">&#9660;
+                Experience:</h2>
+            <div class="hidden exp-info">
+                <li>ESL Teacher</li>
+                <li>High School Program Tutor</li>
+                <li>Building Restoration</li>
+                <li>Photocopier|Printer mobile technician</li>
+            </div>
+
+        </section>
+        <section id="skills">
+            <h2 onclick="document.querySelector('.skill-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
+                Skills:</h2>
+            <ul class="hidden skill-info"></ul>
+        </section>
+        <section id="projects">
+            <h2 onclick="document.querySelector('.proj-info').classList.toggle('hidden');" class="title-stuff"> &#9660;
+                Projects:</h2>
+
+            <ul class="hidden proj-info"></ul>
+
+        </section>
+
+        <section>
+            <h2 onclick="document.querySelector('.connect-info').classList.toggle('hidden');" class="title-stuff">
+                &#9660;
+                Connect:</h2>
+            <ul class="hidden connect-info">
+                <li>simonjshurety@gmail.com</li>
+                <li>https://github.com/SimonjShurety</li>
+                <li>linkedIn</li>
+            </ul>
+        </section>
+        <section id="connect">
+
+            <aside>
+                <h2 onclick="document.querySelector('.tea-info').classList.toggle('hidden');" class="title-stuff">
+                    &#9660;
+                    How to make a cup of
+                    tea:</h2>
+                <ul class="hidden tea-info">
+                    <li>Put a teabag in a cup</li>
+                    <li>Add boiling water</li>
+                    <li>Steep for 2-3 minutes</li>
+                    <li>Squeeze teabag with tea spoon</li>
+                    <li>Add sugar, stir</li>
+                    <li>Add milk, stir</li>
+                    <li>Blow, sip and "aahhhhh"</li>
                 </ul>
-            </nav>
-        </div>
+            </aside>
+        </section>
+        <section id="contact" class="contact-info">
+            <h2 onclick="document.querySelector('.message-info').classList.toggle('hidden');" class="title-stuff">
+                &#9660;
+                Leave a Message:</h2>
+            <form action="" name="leave_message" class="message-info hidden">
+                <br>
+                <label for="name">Name</label>
+                <br>
+                <input type="text" name="name" required="true">
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" required="true">
+                <br>
+                <br>
+                Description
+                <br>
+                <textarea name="message" required="true" id="" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2 id="headingMessage">Messages</h2>
+            <ul id="messageList"></ul>
+        </section>
+    </main>
+    <hr class="rule">
+    <footer class="container">
+        <ul class="menu">
+            <li class="menu-item">
+                <a class="link" href="https://linkedin.com" target="_blank" title="LinkedIn">
+                    <i data-feather="linkedin"></i>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="link" href="https://github.com/simonjshurety" target="_blank" title="GitHub">
+                    <i data-feather="github"></i>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="link" href="https://twitter.com" target="_blank" title="Twitter">
+                    <i data-feather="twitter"></i>
+                </a>
+            </li>
+        </ul>
+
+
     </footer>
 
     <div class="background">

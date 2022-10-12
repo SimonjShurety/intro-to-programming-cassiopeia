@@ -5,22 +5,20 @@ let footer = document.querySelector("footer");
 let copyright = document.createElement("p");
 copyright.innerText = `© Simon ${year}`;
 footer.appendChild(copyright);
+copyright.className = "copyright";
 
 let skillsSection = document.querySelector("#skills");
 
 let skillsList = skillsSection.querySelector("ul");
 
 const skills = [
-  "Javascript",
-  "CSS",
-  "HTML",
-  "Git|Github",
-  "VS Code",
-  "PC|Laptop repair",
+  "Javascript | ",
+  " CSS | ",
+  " HTML | ",
+  " Git/Github | ",
+  " VS Code | ",
+  " PC/Laptop repair | ",
 ];
-
-document.querySelector(".skill-info").style =
-  "display: flex; margin-right: 50px";
 
 for (let i = 0; i < skills.length; i++) {
   let skill = document.createElement("li");
@@ -54,6 +52,7 @@ messageForm.addEventListener("submit", (event) => {
   const removeButton = document.createElement("button");
   removeButton.innerText = "Remove";
   removeButton.type = "button";
+  removeButton.className = "remove";
 
   removeButton.addEventListener("click", (event) => {
     const entry = removeButton.parentNode;
@@ -79,23 +78,12 @@ function renderProjectsWithFetch() {
         (repo) => repo.name === "intro-to-programming-cassiopeia"
       );
 
-      // // filter out irrelevant repositories
-      // const filteredData = data.filter((repo) =>
-      //   repo.name.includes("intro-to-programming-cassiopeia")
-      // );
-
       const projectSection = document.querySelector("#projects");
       const projectList = projectSection.querySelector("ul");
 
       const project = document.createElement("li");
       project.innerHTML = `<a class="link link--no-decor" href="${repo.html_url}">${repo.name}</a>`;
       projectList.appendChild(project);
-
-      // for (let repository of filteredData) {
-      //   const project = document.createElement("li");
-      //   project.innerHTML = `<a class="link link--no-decor" href="${repository.html_url}">${repository.name}</a>`;
-      //   projectList.appendChild(project);
-      // }
     });
 }
 
